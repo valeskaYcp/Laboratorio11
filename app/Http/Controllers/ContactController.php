@@ -44,6 +44,9 @@ class ContactController extends Controller
             'apodo' => 'nullable|string|max:100',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        $validated = array_map('trim', $validated);
+        $validated = array_map('strip_tags', $validated);
         
         if ($request->hasFile('imagen')) {
             $imageName = time().'.'.$request->imagen->extension();
@@ -91,6 +94,9 @@ class ContactController extends Controller
             'apodo' => 'nullable|string|max:100',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
+
+        $validated = array_map('trim', $validated);
+        $validated = array_map('strip_tags', $validated);
 
         if ($request->hasFile('imagen')) {
             $imageName = time().'.'.$request->imagen->extension();  
