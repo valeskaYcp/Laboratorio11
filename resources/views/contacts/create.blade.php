@@ -65,12 +65,14 @@
                     </div>
                 </div>
             </div>
-        </form>
-        <div class="mt-8 flex justify-center">
-            <div class="space-x-6">
-                <x-primary-button>Guardar</x-primary-button>
-                <x-secondary-button onclick="location.href='{{ route('contacts.index') }}'">Cancelar</x-secondary-button>
+            <div class="mt-8 flex justify-center">
+                <div class="space-x-6">
+                    <x-primary-button>Guardar</x-primary-button>
+                    <x-secondary-button onclick="location.href='{{ route('contacts.index') }}'">Cancelar</x-secondary-button>
+                </div>
             </div>
+        </form>
     </div>
 </x-app-layout>
+
 
